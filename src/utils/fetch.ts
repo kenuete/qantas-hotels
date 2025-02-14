@@ -1,7 +1,7 @@
-import { HotelResults } from '../types'
+import { Hotel } from '../types'
 
 interface GetHotelResultsProps {
-  onSuccess: (data: HotelResults) => void
+  onSuccess: (data: Hotel[]) => void
   onFailure: (errorMessage: string) => void
 }
 
