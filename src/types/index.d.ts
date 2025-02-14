@@ -27,7 +27,7 @@ export type Rating = {
   ratingType: string
 }
 
-type Offer = {
+export type Offer = {
   promotion: Promotion
   name: string
   displayPrice: Price
