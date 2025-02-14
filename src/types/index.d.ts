@@ -8,7 +8,7 @@ export type Hotel = {
   offer: Offer
 }
 
-type Property = {
+export type Property = {
   propertyId: string
   title: string
   address: string[]
@@ -22,7 +22,7 @@ export type Image = {
   imageType: string
 }
 
-type Rating = {
+export type Rating = {
   ratingValue: number
   ratingType: string
 }

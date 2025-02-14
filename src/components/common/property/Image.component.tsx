@@ -1,4 +1,4 @@
-import { Img } from './Image.styles'
+import { Img } from './Property.styles'
 import { Image as ImageType } from '../../../types'
 
 interface ImageProps {

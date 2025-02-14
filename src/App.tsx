@@ -3,7 +3,6 @@ import { getHotelResults } from './utils/fetch'
 import { Hotel } from './types'
 import Hotels from './components/hotels/Hotels.component'
 
-
 const App = ()  => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
