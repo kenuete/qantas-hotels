@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getHotelResults } from './utils/fetch'
 import { Hotel } from './types'
+import Hotels from './components/hotels/Hotels.component'
 
 
 const App = ()  => {
@@ -19,12 +20,13 @@ const App = ()  => {
 
   useEffect(() => {
     getHotelResults({ onSuccess, onFailure})
-  }, [])
-  
-  return (
-    <>
+  }, [onSuccess, onFailure])
 
-    </>
+  if(loading) return <p>Loading..</p>
+  if(error) return <p>{error}</p>
+
+  return (
+    <Hotels results={hotelResults} />
   )
 }
 

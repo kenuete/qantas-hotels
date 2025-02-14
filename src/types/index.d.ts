@@ -16,7 +16,7 @@ type Property = {
   rating: Rating
 }
 
-type Image = {
+export type Image = {
   url: string
   caption: string
   imageType: string
