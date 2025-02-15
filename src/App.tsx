@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getHotelResults } from './utils/fetch'
 import { Hotel } from './types'
 import Hotels from './components/hotels/Hotels.component'
+import Header from './components/common/header/Header.component'
 
 const App = ()  => {
   const [loading, setLoading] = useState(true)
@@ -27,6 +28,7 @@ const App = ()  => {
 
   return (
     <>
+      <Header />
       <Hotels results={hotelResults} />
     </>
   )
