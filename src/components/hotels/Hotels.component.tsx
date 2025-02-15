@@ -6,9 +6,10 @@ import { sortResults, getSortFn, SortTypes, getSortOrder } from '../../utils/sor
 
 interface HotelProps {
   results: Hotel[]
+  searchedPlace: string
 }
 
-const Hotels: React.FC<HotelProps> = ({ results }) => {
+const Hotels: React.FC<HotelProps> = ({ results, searchedPlace }) => {
   const [sortBy, setSortBy] = useState<SortTypes>('price-low-high')
   const sortedResults = sortResults({results, order: getSortOrder(sortBy), getSortItem: getSortFn(sortBy)})
   return (
@@ -17,6 +18,7 @@ const Hotels: React.FC<HotelProps> = ({ results }) => {
         count={results.length}
         sortBy={sortBy}
         setSortBy={setSortBy}
+        searchedPlace={searchedPlace}
       />
       {sortedResults.map((result) => (
         <Result row={result} />

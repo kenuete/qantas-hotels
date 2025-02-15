@@ -29,7 +29,7 @@ const App = ()  => {
   return (
     <>
       <Header />
-      <Hotels results={hotelResults} />
+      <Hotels results={hotelResults} searchedPlace='Sydney'/>
     </>
   )
 }
