@@ -7,6 +7,7 @@ const App = ()  => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [hotelResults, setHotelResults] = useState<Hotel[]>([])
+  
 
   const onSuccess = useCallback((hotels: Hotel[]) => {
     setHotelResults(hotels)
@@ -25,7 +26,9 @@ const App = ()  => {
   if(error) return <p>{error}</p>
 
   return (
-    <Hotels results={hotelResults} />
+    <>
+      <Hotels results={hotelResults} />
+    </>
   )
 }
 
