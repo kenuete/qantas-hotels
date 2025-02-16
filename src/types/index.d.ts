@@ -35,7 +35,7 @@ export type Offer = {
   cancellationOption: CancellationOption
 }
 
-type Promotion = {
+export type Promotion = {
   title: string
   type: string
 }

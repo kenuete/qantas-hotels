@@ -11,11 +11,11 @@ interface Result {
 const Result: React.FC<Result> = ({ row }) => {
     const { property, offer } = row || {}
     const { previewImage } = property || {}
-    const { displayPrice, savings } = offer || {}
+    const { displayPrice, savings, promotion } = offer || {}
 
     return (
         <Row>
-            <Image previewImage={previewImage} />
+            <Image previewImage={previewImage} promotion={promotion} />
             <PropertyDetails property={property} offer={offer} />
             <Pricing displayPrice={displayPrice} savings={savings} />
         </Row>

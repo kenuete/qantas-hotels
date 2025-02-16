@@ -4,6 +4,7 @@ import { Button, Paragraph } from '../styles'
 export const ImageContainer = styled.div`
     height: 130px;
     padding: 10px 0 10px 0;
+    position: relative;
 `
 
 export const Img = styled.img`
@@ -73,4 +74,16 @@ export const SavingsAmount = styled(Paragraph)`
 
 export const RatingContainer = styled.div`
     margin-left: 10px;
+`
+
+export const PromoBanner = styled.p`
+    position: absolute;
+    max-width: 60%;
+    color: #BE0000;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    background-color: white;
+    border-left: 1px solid #E0E5E5;
+    font-weight: 500;
 `
