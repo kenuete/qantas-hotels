@@ -1,6 +1,6 @@
 import { Rating, Property } from '../../../types'
 import { Header as Container } from './Property.styles'
-
+import { H3 } from '../styles'
 interface HeaderProps {
     title: Property['title']
     rating: Rating
@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, rating }) => {
     return (
         <Container>
-            <h3>{title}</h3>
+            <H3>{title}</H3>
             <div>****</div>
         </Container>
     )

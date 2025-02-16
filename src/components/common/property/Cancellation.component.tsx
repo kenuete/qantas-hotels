@@ -1,5 +1,6 @@
 import { CancellationPolicy } from '../../../constants'
 import { Offer } from '../../../types'
+import { CancellationPolicyText } from './Property.styles'
 
 interface CancellationProps {
     cancellationOption: Offer['cancellationOption']
@@ -8,7 +9,7 @@ interface CancellationProps {
 const Cancellation: React.FC<CancellationProps> = ({ cancellationOption }) => {
     const { cancellationType } = cancellationOption || {}
     return (
-        <p>{CancellationPolicy[cancellationType as keyof typeof CancellationPolicy]}</p>
+        <CancellationPolicyText>{CancellationPolicy[cancellationType as keyof typeof CancellationPolicy]}</CancellationPolicyText>
     )
 }
 

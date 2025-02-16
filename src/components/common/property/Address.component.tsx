@@ -1,12 +1,12 @@
 import { Property  } from '../../../types'
-
+import { Paragraph } from '../styles'
 interface AddressProps {
     address: Property['address']
 }
 
 const Address: React.FC<AddressProps> = ({ address }) => {
     return (
-        <p>{address.join(' ')}</p>
+        <Paragraph light size='12'>{address.join(' ')}</Paragraph>
     )
 }
 
