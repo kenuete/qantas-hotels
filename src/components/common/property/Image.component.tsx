@@ -1,4 +1,4 @@
-import { Img } from './Property.styles'
+import { Img, ImageContainer } from './Property.styles'
 import { Image as ImageType } from '../../../types'
 
 interface ImageProps {
@@ -7,7 +7,9 @@ interface ImageProps {
 
 const Image: React.FC<ImageProps> = ({ previewImage }) => {
     return (
-        <Img src={`${previewImage?.url}=${Math.random()}`} alt={previewImage?.caption} />
+        <ImageContainer>
+            <Img src={`${previewImage?.url}=${Math.random()}`} alt={previewImage?.caption} />
+        </ImageContainer>
     )
 }
 

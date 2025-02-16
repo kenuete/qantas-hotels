@@ -1,6 +1,11 @@
 import { styled } from 'styled-components'
 import { Button, Paragraph } from '../styles'
 
+export const ImageContainer = styled.div`
+    height: 130px;
+    padding: 10px 0 10px 0;
+`
+
 export const Img = styled.img`
     width: 150px;
 `
@@ -14,6 +19,8 @@ export const Header = styled.header`
 export const PropertyDetailsContainer = styled.div`
     display: flex;
     flex-direction: column;
+    border-top: 1px solid #cccccc;
+    padding-top: 10px;
     /* override default */
     *{
         margin: 0; 
@@ -51,7 +58,8 @@ export const PricingContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    justify-self: end;
+    border-top: 1px solid #cccccc;
+    align-items: flex-end;
 /* ovveride default */
     *{
         margin: 0;
