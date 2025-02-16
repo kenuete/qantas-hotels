@@ -42,3 +42,22 @@ export const OfferContainer = styled.div`
     justify-content: space-between;
     margin-top: 20px;
 `
+
+export const PricingText = styled(Paragraph)`
+    color: #4c4949;
+`
+
+export const PricingContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+/* ovveride default */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+`
+
+export const SavingsAmount = styled(Paragraph)`
+    color: #BE0000;
+`

@@ -34,3 +34,7 @@ export const Button = styled.button.withConfig({
 })<ButtonProps>`
 
 `
+export const Dollar = styled.span`
+    vertical-align: text-top;
+    font-size: 12px;
+`

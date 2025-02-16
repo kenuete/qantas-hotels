@@ -1,5 +1,7 @@
 import { Offer } from '../../../types'
-
+import { Paragraph } from '../styles'
+import { PricingText, PricingContainer, SavingsAmount } from './Property.styles'
+import { Dollar } from '../styles'
 interface PricingProps {
     displayPrice: Offer['displayPrice']
     savings: Offer['savings']
@@ -8,12 +10,13 @@ interface PricingProps {
 const Pricing: React.FC<PricingProps> = ({ displayPrice, savings}) => {
     const { currency, amount } = displayPrice || {}
     const { amount: savingsAmount } = savings || {}
+
     return (
-        <div>
-            <p>{`1 night total(${currency})`}</p>
-            <p>{amount}</p>
-            <p>{savingsAmount}</p>
-        </div>
+        <PricingContainer>
+            <PricingText size='12'>{`1 night total (${currency})`}</PricingText>
+            <Paragraph size='24'><Dollar>$</Dollar>{amount}</Paragraph>
+            <SavingsAmount size='16'>{savingsAmount ? `$${savingsAmount}~` : '\u00A0'}</SavingsAmount>
+        </PricingContainer>
     )
 }
 
