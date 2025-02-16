@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 import { Button, Paragraph } from '../styles'
 
 export const Img = styled.img`
-
+    width: 150px;
 `
 
 export const Header = styled.header`
@@ -51,6 +51,7 @@ export const PricingContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    justify-self: end;
 /* ovveride default */
     *{
         margin: 0;
@@ -60,4 +61,8 @@ export const PricingContainer = styled.div`
 
 export const SavingsAmount = styled(Paragraph)`
     color: #BE0000;
+`
+
+export const RatingContainer = styled.div`
+    margin-left: 10px;
 `
