@@ -1,5 +1,5 @@
-import { Property  } from '../../../types'
-import { Paragraph } from '../styles'
+import { Property  } from '../../types'
+import { Paragraph } from '../common/styles'
 interface AddressProps {
     address: Property['address']
 }

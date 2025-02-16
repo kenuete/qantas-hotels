@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Hotel } from '../../types'
-import Result from '../common/results/Result.component'
-import ResultsHeader from '../common/results/ResultsHeader.component'
+import Result from '../results/Result.component'
+import ResultsHeader from '../results/ResultsHeader.component'
 import { sortResults, getSortFn, SortTypes, getSortOrder } from '../../utils/sort'
 
 interface HotelProps {

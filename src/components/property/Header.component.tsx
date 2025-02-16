@@ -1,6 +1,6 @@
-import { Rating as RatingType, Property } from '../../../types'
+import { Rating as RatingType, Property } from '../../types'
 import { Header as Container } from './Property.styles'
-import { H3 } from '../styles'
+import { H3 } from '../common/styles'
 import Rating from './Rating.component'
 interface HeaderProps {
     title: Property['title']

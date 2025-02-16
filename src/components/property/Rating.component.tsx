@@ -1,6 +1,6 @@
 import CoreRating from 'react-rating'
 import { RatingContainer } from './Property.styles'
-import { Rating as RatingType } from '../../../types'
+import { Rating as RatingType } from '../../types'
 import { FaStar, FaRegStar } from 'react-icons/fa'
 import { FaRegCircle, FaCircle } from 'react-icons/fa'
 

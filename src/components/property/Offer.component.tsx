@@ -1,4 +1,4 @@
-import { Offer as OfferType } from '../../../types'
+import { Offer as OfferType } from '../../types'
 import Cancellation from './Cancellation.component'
 import { RoomTypeBtn, OfferContainer } from './Property.styles'
 

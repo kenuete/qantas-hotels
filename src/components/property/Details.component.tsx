@@ -1,5 +1,5 @@
 import Header from "./Header.component"
-import { Property, Offer as OfferType } from "../../../types"
+import { Property, Offer as OfferType } from "../../types"
 import Address from "./Address.component"
 import {PropertyDetailsContainer as Container } from './Property.styles'
 import Offer from './Offer.component'

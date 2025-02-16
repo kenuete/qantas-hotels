@@ -1,5 +1,5 @@
-import { CancellationPolicy } from '../../../constants'
-import { Offer } from '../../../types'
+import { CancellationPolicy } from '../../constants'
+import { Offer } from '../../types'
 import { CancellationPolicyText } from './Property.styles'
 
 interface CancellationProps {

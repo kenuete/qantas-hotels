@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { Button, Paragraph } from '../styles'
+import { Button, Paragraph } from '../common/styles'
 
 export const ImageContainer = styled.div`
     height: 130px;

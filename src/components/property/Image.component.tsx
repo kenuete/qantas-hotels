@@ -1,6 +1,6 @@
 import { Img, ImageContainer, PromoBanner } from './Property.styles'
-import { Image as ImageType } from '../../../types'
-import { Promotion as PromotionType } from '../../../types'
+import { Image as ImageType } from '../../types'
+import { Promotion as PromotionType } from '../../types'
 
 interface ImageProps {
     previewImage: ImageType
