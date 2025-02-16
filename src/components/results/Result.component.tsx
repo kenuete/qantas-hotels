@@ -5,19 +5,21 @@ import PropertyDetails from '../property/Details.component'
 import Pricing from '../property/Pricing.component'
 
 interface Result {
+    id?: string
     row: Hotel
 }
 
-const Result: React.FC<Result> = ({ row }) => {
+const Result: React.FC<Result> = ({ id, row }) => {
     const { property, offer } = row || {}
     const { previewImage } = property || {}
     const { displayPrice, savings, promotion } = offer || {}
+    const resultId = `result-row-${id}`
 
     return (
-        <Row>
+        <Row data-test-id={resultId}>
             <Image previewImage={previewImage} promotion={promotion} />
-            <PropertyDetails property={property} offer={offer} />
-            <Pricing displayPrice={displayPrice} savings={savings} />
+            <PropertyDetails property={property} offer={offer} id={id}/>
+            <Pricing id={id} displayPrice={displayPrice} savings={savings} />
         </Row>
     )
 }

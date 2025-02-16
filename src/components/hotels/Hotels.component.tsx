@@ -21,7 +21,7 @@ const Hotels: React.FC<HotelProps> = ({ results, searchedPlace }) => {
         searchedPlace={searchedPlace}
       />
       {sortedResults.map((result) => (
-        <Result row={result} />
+        <Result id={result.id} row={result} />
       ))}
     </>
   )

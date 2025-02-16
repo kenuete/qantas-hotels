@@ -5,17 +5,18 @@ import { Dollar } from '../common/styles'
 interface PricingProps {
     displayPrice: Offer['displayPrice']
     savings: Offer['savings']
+    id?: string
 }
 
-const Pricing: React.FC<PricingProps> = ({ displayPrice, savings}) => {
+const Pricing: React.FC<PricingProps> = ({ displayPrice, savings, id}) => {
     const { currency, amount } = displayPrice || {}
     const { amount: savingsAmount } = savings || {}
 
     return (
-        <PricingContainer>
+        <PricingContainer data-testid={`pricing-${id}`}>
             <PricingText size='12'>{`1 night total (${currency})`}</PricingText>
-            <Paragraph size='24'><Dollar>$</Dollar>{amount}</Paragraph>
-            <SavingsAmount size='16'>{savingsAmount ? `Save $${savingsAmount}~` : '\u00A0'}</SavingsAmount>
+            <Paragraph size='24' data-testid={`pricing-amount-${id}`}><Dollar>$</Dollar>{amount}</Paragraph>
+            <SavingsAmount size='16' data-testid={`pricing-savings-amount-${id}`}>{savingsAmount ? `Save $${savingsAmount}~` : '\u00A0'}</SavingsAmount>
         </PricingContainer>
     )
 }
