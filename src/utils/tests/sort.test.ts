@@ -146,6 +146,24 @@ describe('sortResults', () => {
       getSortItem: getPrice,
     })
     expect(sortedResults).toEqual([mockHotel1, mockHotel2, mockHotel3])
+  })
+  
+  it('should put the item with no display price to the last when asc', () => {
+    const sortedResults = sortResults({
+      results: [mockHotel1, mockHotel3],
+      order: 'asc',
+      getSortItem: getPrice,
+    })
+    expect(sortedResults).toEqual([mockHotel1, mockHotel3])
+  })
+
+  it('should put the items with no display price (when there are multiple)', () => {
+    const sortedResults = sortResults({
+      results: [mockHotel3, mockHotel3],
+      order: 'asc',
+      getSortItem: getPrice,
+    })
+    expect(sortedResults).toEqual([mockHotel3, mockHotel3])
   })    
 })
 

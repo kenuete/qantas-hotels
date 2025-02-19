@@ -1,12 +1,20 @@
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Image from '../Image.component'
 import { Image as ImageType, Promotion as PromotionType } from '../../../types'
+import placeholderImg from '../../../assets/placeholder-img.jpg'
 
 jest.mock('react-lazy-load-image-component', () => {
   return {
     __esModule: true,
-    LazyLoadImage: jest.fn((props) => <img data-testid='mocked-lazy-load-image' src={props.src} alt={props.alt}/>),
+    LazyLoadImage: jest.fn((props) => (
+      <img
+        data-testid='mocked-lazy-load-image'
+        src={props.src}
+        alt={props.alt}
+        onError={props.onError} 
+      />
+    )),
   }
 })
 
@@ -34,11 +42,19 @@ describe('Image component', () => {
   })
 
   it('renders the image with correct src and alt attributes', () => {
-      const { getByAltText } = render(
-          <Image previewImage={previewImage} promotion={promotion} />
-      )
-      const image = getByAltText(previewImage?.caption)
-      expect(image).toBeInTheDocument()
-      expect(image.getAttribute('src')).toBe(`${previewImage?.url}=0.123`)
+    const { getByAltText } = render(
+      <Image previewImage={previewImage} promotion={promotion} />
+    )
+    const image = getByAltText(previewImage?.caption)
+    expect(image).toBeInTheDocument()
+    expect(image.getAttribute('src')).toBe(`${previewImage?.url}=0.123`)
   })
+
+  it('sets the placeholderSrc prop correctly (line 22)', () => {
+    const screen = render(<Image previewImage={previewImage} promotion={promotion} />)
+    screen.debug()
+    const lazyImage = screen.getByTestId('mocked-lazy-load-image')
+    fireEvent.error(lazyImage)
+    expect(lazyImage).toHaveAttribute('src', placeholderImg)
+  })  
 })
