@@ -16,7 +16,7 @@ const Result: React.FC<Result> = ({ id, row }) => {
     const resultId = `result-row-${id}`
 
     return (
-        <Row data-test-id={resultId}>
+        <Row data-testid={resultId}>
             <Image previewImage={previewImage} promotion={promotion} />
             <PropertyDetails property={property} offer={offer} id={id}/>
             <Pricing id={id} displayPrice={displayPrice} savings={savings} />
