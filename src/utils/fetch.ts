@@ -5,7 +5,7 @@ interface GetHotelResultsProps {
   onFailure: (errorMessage: string) => void
 }
 
-const URL = "/api/hotels"
+const URL = '/api/hotels'
 
 export const getHotelResults = async ({
   onSuccess,
