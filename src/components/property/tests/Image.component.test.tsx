@@ -50,11 +50,20 @@ describe('Image component', () => {
     expect(image.getAttribute('src')).toBe(`${previewImage?.url}=0.123`)
   })
 
-  it('sets the placeholderSrc prop correctly (line 22)', () => {
+  it('sets the placeholderSrc prop correctly', () => {
     const screen = render(<Image previewImage={previewImage} promotion={promotion} />)
     screen.debug()
     const lazyImage = screen.getByTestId('mocked-lazy-load-image')
     fireEvent.error(lazyImage)
     expect(lazyImage).toHaveAttribute('src', placeholderImg)
-  })  
+  })
+  
+  it('handles when promotion undefined', () => {
+    // @ts-expect-error - Testing behavior when promotion is undefined
+    const screen = render(<Image previewImage={previewImage} promotion={undefined} />)
+    screen.debug()
+    const lazyImage = screen.getByTestId('mocked-lazy-load-image')
+    fireEvent.error(lazyImage)
+    expect(lazyImage).toHaveAttribute('src', placeholderImg)
+  })    
 })

@@ -14,4 +14,11 @@ describe('Cancellation component', () => {
         render(<Cancellation cancellationOption={cancellationOption} id={'abc'}/>)
         expect(screen.getByTestId('cancellation-policy-text-abc')).toHaveTextContent('')
     })
+    
+    it('handles when cancellationOption is undefined', () => {
+        const cancellationOption = undefined
+        // @ts-expect-error - Testing behavior with an undefined prop
+        render(<Cancellation cancellationOption={cancellationOption} id={'abc'}/>)
+        expect(screen.getByTestId('cancellation-policy-text-abc')).toHaveTextContent('')
+    })    
 })

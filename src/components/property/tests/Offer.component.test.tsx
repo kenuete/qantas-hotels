@@ -42,4 +42,10 @@ describe('Offer component', () => {
         render(<Offer id="789" offer={mockOffer} />)
         expect(screen.getByText('cancellation component')).toBeInTheDocument()
     })
+
+    it('renders the Cancellation component when offer is undefined', () => {
+        // @ts-expect-error - Testing behavior
+        render(<Offer id="789" offer={undefined} />)
+        expect(screen.getByText('cancellation component')).toBeInTheDocument()
+    })    
 })

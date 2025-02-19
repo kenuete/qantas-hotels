@@ -20,4 +20,11 @@ describe('Pricing component', () => {
         expect(screen.getByText('1 night total (EUR)')).toBeInTheDocument()
         expect(screen.getByTestId('pricing-savings-amount-abc').textContent).toBe(' ')
     })
+
+    it('renders when displayPrice is undefined', () => {
+        const displayPrice = undefined
+        // @ts-expect-error - Testing behavior with displayPrice as undefined
+        render(<Pricing id='abc' displayPrice={displayPrice} savings={null} />)
+        expect(screen.getByTestId('pricing-savings-amount-abc').textContent).toBe(' ')
+    })    
 })
