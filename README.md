@@ -49,7 +49,7 @@ The codebase has 100% test coverage.
   
 ## Notes
 
-Some CSS files are part of the Vite template and I did not remove them. There is scope for improvements in terms of accessibility, directory structure and standardizing few constants, global styles etc.
+Some CSS files are part of the Vite template and I did not remove them. There is scope for improvements in terms of accessibility, directory structure and standardizing few constants, global styles, responsive design etc.
 
 ## Screenshots
 
