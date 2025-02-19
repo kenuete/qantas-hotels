@@ -48,5 +48,3 @@ type Price = {
 type CancellationOption = {
   cancellationType: string
 }
-
-declare module 'react-lazy-load-image-component'

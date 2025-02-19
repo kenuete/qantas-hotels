@@ -32,7 +32,6 @@ export const sortResults = <T>({
     if (itemB === null) return -1
     return order === 'asc' ? itemA - itemB : itemB - itemA
   })
-  console.log('R', R)
   return R
 }
 
