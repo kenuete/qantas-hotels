@@ -5,17 +5,17 @@
 
   > git clone git@github.com:kenuete/qantas-hotels.git
 
-3. **Set the node version**
+2. **Set the node version**
 
   > nvm use
 
 this application requires the latest node version v23.3.0
 
-4. **Install the depdencies**
+3. **Install the depdencies**
 
    > yarn install
 
-5. **Run the app**
+4. **Run the app**
 
    > yarn all 
 
@@ -27,11 +27,11 @@ if the above combined command does not work for any reason, please run the json 
 
   > yarn dev
 
-6. **Open the application** in your browser:
+5. **Open the application** in your browser:
 
    👉 [http://localhost:5173/](http://localhost:5173/)
 
-7. **To run the tests**
+6. **To run the tests**
 
   > yarn test
 
