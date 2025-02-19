@@ -4332,10 +4332,9 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
-react-rating@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-2.0.5.tgz#2c9d7ebe5907db0361ba28b7c19f0394e6e4dd76"
-  integrity sha512-uldxgLCe5bzqGX7V+7/bPgQQj2Kok6eiMgTMxjKOhfhnQkFLDlc4TjMlp7gaJFAHWdbiOnqpiShI7z8as6oWtg==
+"react-rating@https://github.com/Selectra-Dev/react-rating.git":
+  version "2.0.6"
+  resolved "https://github.com/Selectra-Dev/react-rating.git#1fea2d48682974908e41348028d01399ba30d880"
   dependencies:
     "@types/lodash" "^4.14.105"
     "@types/react" "^16.0.40"

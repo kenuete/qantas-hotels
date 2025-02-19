@@ -15,7 +15,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-rating": "^2.0.5",
+    "react-rating": "https://github.com/Selectra-Dev/react-rating.git",
     "react-spinners": "^0.15.0",
     "react-sweetalert2": "^0.6.0",
     "styled-components": "^6.1.15"
