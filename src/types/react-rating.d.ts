@@ -11,4 +11,4 @@ declare module 'react-rating' {
   export default Rating
 }
 
-declare module "react-lazy-load-image-component"
+

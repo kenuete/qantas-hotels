@@ -11,9 +11,9 @@ export type SortTypes = 'price-high-low' | 'price-low-high'
 export const getPrice = (result: Hotel) => result?.offer?.displayPrice?.amount
 
 interface SortResults<T> {
-    results: T[]
-    order?: "asc" | "dsc"
-    getSortItem: (result: T) => number | undefined | null;
+  results: T[]
+  order?: 'asc' | 'dsc'
+  getSortItem: (result: T) => number | undefined | null
 }
 
 // made it as reusable function to extend for future sorting requirements.
@@ -21,7 +21,7 @@ interface SortResults<T> {
 export const sortResults = <T>({
   results,
   order,
-  getSortItem
+  getSortItem,
 }: SortResults<T>) => {
   const R = results.sort((a, b) => {
     const itemA = getSortItem(a) ?? null
@@ -37,12 +37,13 @@ export const sortResults = <T>({
 }
 
 export const getSortFn = (sortBy: SortTypes) => {
-    switch(sortBy) {
-        case 'price-low-high': 
-        case 'price-high-low': return getPrice
-    }
+  switch (sortBy) {
+    case 'price-low-high':
+    case 'price-high-low':
+      return getPrice
+  }
 }
 
 export const getSortOrder = (sortBy: SortTypes) => {
-    return sortBy.includes('high-low') ? 'dsc': 'asc'
+  return sortBy.includes('high-low') ? 'dsc' : 'asc'
 }
