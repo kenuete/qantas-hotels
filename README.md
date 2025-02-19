@@ -11,7 +11,7 @@
 
    > yarn all 
 
-This command will run the mock json-server and then vite dev server to serve the front-end application. The json-server is hosting the json response and is accessible at port 5001. Vite is configured to proxy to the json-server
+This command will run the mock [json-server](https://www.npmjs.com/package/json-server) and then [vite](https://vite.dev/guide/) dev server to serve the front-end application. The json-server is hosting the json response and is accessible at port 5001. Vite is configured to proxy to the json-server
 
 if the above combined command does not work for any reason, please run the json server and vite seperately in 2 terminal tabs using below commands,
 
