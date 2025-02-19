@@ -41,5 +41,25 @@ The codebase has 100% test coverage.
 
 1. **Frontend**: React, Vite, TypeScript, Styled Components
 2. **Backend**: json-server to server the provided json file.
-3. **Open source components used**: (react-rating)[https://www.npmjs.com/package/react-rating] (react-sweetalert2)[https://www.npmjs.com/package/react-sweetalert2]
----
+3. **Open source components used**:
+   * [react-rating](https://www.npmjs.com/package/react-rating) -- this is for the rating icons
+   * [react-sweetalert2](https://www.npmjs.com/package/react-sweetalert2) -- this is for the api error modal
+   * [react-spinners](https://www.npmjs.com/package/react-spinners) -- this is for the api loading spinner
+   * [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component) image lazy loading
+  
+## Notes
+
+Some CSS files are part of the Vite template and I did not remove them. There is scope for improvements in terms of directory structure and standardizing few constants, global styles etc.
+
+## Screenshots
+
+## Application
+
+<img width="826" alt="Screenshot 2025-02-19 at 9 03 02 pm" src="https://github.com/user-attachments/assets/f395a776-caef-4971-be0b-cdc4c22aeaea" />
+
+## Test Overage
+<img width="1511" alt="Screenshot 2025-02-19 at 9 00 23 pm" src="https://github.com/user-attachments/assets/3f67b78d-5c28-4d5e-aedd-2e4d56a32cd8" />
+
+
+
+
