@@ -10,3 +10,5 @@ declare module 'react-rating' {
   const Rating: React.ComponentType<RatingProps>
   export default Rating
 }
+
+declare module "react-lazy-load-image-component"
