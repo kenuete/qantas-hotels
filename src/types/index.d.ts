@@ -41,7 +41,7 @@ export type Promotion = {
 }
 
 type Price = {
-  amount: number
+  amount: number | null
   currency: string
 }
 

@@ -1,7 +1,13 @@
+/*how to add more sorting*/
+/* 1. Add SortTypes */
+/* 2. Add Getter functions to select the target property for sorting */
+/* 3. Add switch cases in getSortFn */
+
 import { Hotel } from '../types/index'
 
 export type SortTypes = 'price-high-low' | 'price-low-high'
 
+// Just create more getter functions as you add more sorting requirements
 export const getPrice = (result: Hotel) => result?.offer?.displayPrice?.amount
 
 interface SortResults<T> {
@@ -10,6 +16,8 @@ interface SortResults<T> {
     getSortItem: (result: T) => number | undefined | null;
 }
 
+// made it as reusable function to extend for future sorting requirements.
+// you dont need to update this function again.
 export const sortResults = <T>({
   results,
   order,
@@ -36,6 +44,5 @@ export const getSortFn = (sortBy: SortTypes) => {
 }
 
 export const getSortOrder = (sortBy: SortTypes) => {
-    console.log('sortBy', sortBy)
     return sortBy.includes('high-low') ? 'dsc': 'asc'
 }
