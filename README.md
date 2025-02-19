@@ -40,7 +40,7 @@ The codebase has 100% test coverage.
 ## Tech Stack
 
 1. **Frontend**: React, Vite, TypeScript, Styled Components
-2. **Backend**: json-server to server the provided json file.
+2. **Backend**: json-server to serve the provided json file.
 3. **Open source components used**:
    * [react-rating](https://www.npmjs.com/package/react-rating) -- this is for the rating icons
    * [react-sweetalert2](https://www.npmjs.com/package/react-sweetalert2) -- this is for the api error modal
