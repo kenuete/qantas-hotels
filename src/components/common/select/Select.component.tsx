@@ -10,7 +10,7 @@ interface SelectProps {
 const Select: React.FC<SelectProps> = ({ options, value, onChange}) => {
   return (
     <select value={value} onChange={onChange}>
-      {options.map(({ label, value }) => <option value={value}> {label}</option>)}
+      {options.map(({ label, value }) => <option value={value} key={label}> {label}</option>)}
     </select>
   )
 }
