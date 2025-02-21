@@ -30,9 +30,11 @@ const Hotels: React.FC<HotelProps> = ({ results, searchedPlace }) => {
         setSortBy={setSortBy}
         searchedPlace={searchedPlace}
       />
-      {sortedResults.map((result) => (
-        <Result id={result.id} key={result.id} row={result} />
-      ))}
+      <section>
+        {sortedResults.map((result) => (
+          <Result id={result.id} key={result.id} row={result} />
+        ))}
+      </section>
     </>
   )
 }

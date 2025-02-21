@@ -6,11 +6,10 @@ import Header from './components/common/header/Header.component'
 import Loader from './components/common/loader/Loader.component'
 import ErrorModal from './components/common/errorModal/ErrorModal.component'
 
-const App = ()  => {
+const App = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [hotelResults, setHotelResults] = useState<Hotel[]>([])
-  
 
   const onSuccess = useCallback((hotels: Hotel[]) => {
     setHotelResults(hotels)
@@ -23,16 +22,18 @@ const App = ()  => {
   }, [])
 
   useEffect(() => {
-    getHotelResults({ onSuccess, onFailure})
+    getHotelResults({ onSuccess, onFailure })
   }, [onSuccess, onFailure])
 
-  if(loading) return <Loader />
-  if(error) return <ErrorModal />
+  if (loading) return <Loader />
+  if (error) return <ErrorModal />
 
   return (
     <>
       <Header />
-      <Hotels results={hotelResults} searchedPlace='Sydney'/>
+      <main>
+        <Hotels results={hotelResults} searchedPlace='Sydney' />
+      </main>
     </>
   )
 }

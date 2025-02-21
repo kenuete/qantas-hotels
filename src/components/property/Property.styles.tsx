@@ -1,10 +1,11 @@
 import { styled } from 'styled-components'
 import { Button, Paragraph } from '../common/styles'
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.figure`
     height: 130px;
     padding: 10px 0 10px 0;
     position: relative;
+    margin: 0;
 `
 
 export const Img = styled.img`
@@ -17,7 +18,7 @@ export const Header = styled.header`
     align-items: baseline;
 `
 
-export const PropertyDetailsContainer = styled.div`
+export const PropertyDetailsContainer = styled.section`
     display: flex;
     flex-direction: column;
     border-top: 1px solid #cccccc;
@@ -55,7 +56,7 @@ export const PricingText = styled(Paragraph)`
     color: #4c4949;
 `
 
-export const PricingContainer = styled.div`
+export const PricingContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -76,7 +77,7 @@ export const RatingContainer = styled.div`
     margin-left: 10px;
 `
 
-export const PromoBanner = styled.p`
+export const PromoBanner = styled.figcaption`
     position: absolute;
     max-width: 60%;
     color: #BE0000;
@@ -86,4 +87,5 @@ export const PromoBanner = styled.p`
     background-color: white;
     border-left: 1px solid #E0E5E5;
     font-weight: 500;
+    margin-top: 14px;
 `
